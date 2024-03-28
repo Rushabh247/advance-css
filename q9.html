@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Card</title>
+
+    <style>
+      :root {
+        --d-flex: flex;
+        --p-10: 10px;
+        --color-white: #fff;
+        --color-grey: #ffffff62;
+      }
+
+      .card {
+        width: 450px;
+        background: #242b2e;
+        display: var(--d-flex);
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: var(--p-10);
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        border-radius: 20px;
+        border: 3px solid var(--color-white);
+        margin: auto;
+      }
+
+      img {
+        width: 210px;
+        height: 120px;
+      }
+
+      h1 {
+        color: var(--color-white);
+        font-size: 30px;
+        text-align: center;
+      }
+
+      p {
+        max-height: 200px;
+        overflow-y: scroll;
+        padding: var(--p-10);
+        color: var(--color-grey);
+      }
+
+      ::-webkit-scrollbar {
+        width: 2px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: var(--color-grey);
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="card">
+      <img
+        src="data:image/jpeg;base64,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"
+        alt="Apple Logo"
+      />
+      <div class="content">
+        <h1>Apple Inc</h1>
+        <p>
+          Apple Inc., founded on April 1, 1976, by Steve Jobs, Steve Wozniak,
+          and Ronald Wayne, is a multinational technology company headquartered
+          in Cupertino, California. <br />
+          <br />
+
+          Apple is renowned for its innovative consumer electronics, software,
+          and online services, including the iPhone, iPad, Mac, Apple Watch, and
+          Apple TV. <br />
+          <br />
+
+          The company's success can be attributed to its commitment to sleek
+          design, intuitive user interfaces, and seamless integration between
+          hardware and software. <br />
+          <br />
+
+          Apple's ecosystem, centered around services like iCloud, iTunes, and
+          the App Store, has created a loyal customer base and fosters an
+          interconnected user experience across its products. <br />
+          <br />
+
+          Under the leadership of Steve Jobs, Apple revolutionized the
+          technology industry with groundbreaking products like the iPod,
+          iPhone, and iPad, setting new standards for smartphones, portable
+          music players, and tablets.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
